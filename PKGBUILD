@@ -1,5 +1,5 @@
 _pkgname=joplin-server
-pkgname="$_pkgname-docker"
+pkgname="$_pkgname-bin"
 pkgver=3.4.3
 pkgrel=1
 pkgdesc='Joplin Server, via Docker image'
