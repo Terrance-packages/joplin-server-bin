@@ -1,0 +1,4 @@
+f /etc/joplin-server/.env 0640 root joplin
+d /var/lib/joplin 0750 joplin joplin
+d /var/lib/joplin/logs 0755 joplin joplin
+d /var/lib/joplin/temp 0755 joplin joplin

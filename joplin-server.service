@@ -1,0 +1,37 @@
+[Unit]
+Description=Joplin Server
+
+[Service]
+Type=simple
+User=joplin
+Group=joplin
+WorkingDirectory=/usr/lib/joplin-server/server
+EnvironmentFile=/etc/joplin-server/.env
+ExecStart=/usr/bin/npm run start-prod
+# Service hardening
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictSUIDSGID=yes
+ProtectSystem=strict
+StateDirectory=joplin
+ProtectHome=yes
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectProc=noaccess
+ProcSubset=pid
+LockPersonality=yes
+RestrictNamespaces=yes
+RestrictRealtime=yes
+PrivateDevices=yes
+PrivateUsers=self
+PrivateTmp=yes
+# pm2 uses a UNIX socket for RPC
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target
