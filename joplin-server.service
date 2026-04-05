@@ -7,7 +7,7 @@ User=joplin
 Group=joplin
 WorkingDirectory=/usr/lib/joplin-server/server
 EnvironmentFile=/etc/joplin-server.env
-ExecStart=/usr/bin/npm run start-prod
+ExecStart=/usr/bin/pnpm run start-prod
 # Service hardening
 NoNewPrivileges=yes
 CapabilityBoundingSet=

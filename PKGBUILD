@@ -8,7 +8,7 @@ pkgdesc='Joplin Server, via Docker image'
 arch=('any')
 url="https://hub.docker.com/r/$_image"
 license=('custom:Joplin-Server-Personal-Use-License')
-depends=('nodejs' 'pm2')
+depends=('nodejs' 'pnpm' 'pm2')
 makedepends=('jq')
 source=(
   "$_pkgname.service"
@@ -16,7 +16,7 @@ source=(
   "$_pkgname.tmpfiles"
   'https://raw.githubusercontent.com/laurent22/joplin/dev/.env-sample'
 )
-sha256sums=('04a34ea1ec568a468a5c9fd0cce923f50225de375878048af4b776b7f1edbea1'
+sha256sums=('adac9f3a6df5a29c4fa865249e9c8b65cd6b582271fb9e69d99c4b9ebc83f5fa'
             '2f3cea9bed6f79d7c93721dd1acb7c3b5c0368be264ae2894bd66034634e694d'
             '55455d0ebfcb6ef72b8c4fe934a69ccfd9089f881058933d7cba0c07d7aaffc0'
             'e85770c7a0391baa7cf18edeeb64b6a8fe2ccb409d31294d2bde4cd8096cf80f')
